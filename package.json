@@ -1,0 +1,15 @@
+{
+  "name": "learnyour123s",
+  "version": "1.0.0",
+  "description": "An AI-powered handwriting practice app for children — draw digits on a canvas and get instant feedback from a trained recognition model, guided by an animated mascot.",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

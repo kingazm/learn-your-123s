@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Datasets (downloaded at training time)
+data/
+
+# Trained model weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Logs and metrics
+logs/
+runs/
+wandb/
+mlruns/
+*.log
+*.csv
+
+# OS
+.DS_Store
+Thumbs.db

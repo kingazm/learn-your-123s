@@ -1,0 +1,33 @@
+{
+  "idleLines": [
+    "Draw a digit for me!",
+    "I'm ready!",
+    "Show me a number.",
+    "Go ahead, draw!"
+  ],
+  "digitQuips": [
+    "Looks like a 0!",
+    "Looks like a 1!",
+    "Looks like a 2!",
+    "Looks like a 3!",
+    "Looks like a 4!",
+    "Looks like a 5!",
+    "Looks like a 6!",
+    "Looks like a 7!",
+    "Looks like an 8!",
+    "Looks like a 9!"
+  ],
+  "sectionLines": {
+    "stats":    ["Let's see how you've been doing!", "Check out your progress!", "Your practice history is here!"],
+    "settings": ["Let's set things up!", "Customize to your liking!", "Make it yours!", "Make yourself at home!"]
+  },
+  "templates": {
+    "practice":        "Let's practice drawing {char}!",
+    "correct":         "Yes! That's a {char}!",
+    "wrong":           "Does not look quite right... Try {char} again!",
+    "clearLearn":      "Let's try {char} again!",
+    "notDrawingLearn": "That doesn't look like a digit - try drawing {char}!",
+    "notDrawing":      "That doesn't look like a digit - try drawing one!",
+    "oops":            "Oops, something went wrong."
+  }
+}

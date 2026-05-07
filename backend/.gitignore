@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.local
+
+# Static build output (copied from frontend/dist)
+static/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
