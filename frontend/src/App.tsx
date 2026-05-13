@@ -97,18 +97,22 @@ export default function App() {
   async function handleRecognize(dataUrl: string) {
     isIdle.current = false
     try {
+      console.log('[predict] sending request (practice mode)')
+      const t0 = performance.now()
       const res = await fetch(`${API}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ image: dataUrl }),
       })
-      if (!res.ok) return
+      console.log('[predict] response %d in %dms', res.status, Math.round(performance.now() - t0))
+      if (!res.ok) { console.error('[predict] non-ok response', res.status); return }
       const data = await res.json()
       if (data.not_drawing) { say(mascot.templates.notDrawing, 'thinking'); return }
       const top: Prediction = data.predictions[0]
+      console.log('[predict] top result — digit=%s confidence=%s%', top.digit, top.confidence.toFixed(1))
       say(`${mascot.digitQuips[top.digit]} (${top.confidence.toFixed(0)}% sure!)`, 'happy')
     } catch (err) {
-      console.error(err)
+      console.error('[predict] request failed', err)
       say(mascot.templates.oops)
     }
   }
@@ -117,16 +121,20 @@ export default function App() {
     isIdle.current = false
     if (!selectedChar) return
     try {
+      console.log('[predict] sending request (learn mode, target=%s)', selectedChar)
+      const t0 = performance.now()
       const res = await fetch(`${API}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ image: dataUrl }),
       })
-      if (!res.ok) return
+      console.log('[predict] response %d in %dms', res.status, Math.round(performance.now() - t0))
+      if (!res.ok) { console.error('[predict] non-ok response', res.status); return }
       const data = await res.json()
       if (data.not_drawing) { say(fmt(mascot.templates.notDrawingLearn, selectedChar), 'thinking'); return }
       const top: Prediction = data.predictions[0]
       const correct = String(top.digit) === selectedChar
+      console.log('[predict] top result — digit=%s confidence=%s% correct=%s', top.digit, top.confidence.toFixed(1), correct)
       setIsCorrect(correct)
       if (correct) {
         say(fmt(mascot.templates.correct, selectedChar), 'happy')
@@ -136,7 +144,7 @@ export default function App() {
         playWrong()
       }
     } catch (err) {
-      console.error(err)
+      console.error('[predict] request failed', err)
       say(mascot.templates.oops)
     }
   }
