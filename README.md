@@ -14,6 +14,15 @@ An AI-powered handwriting practice app for children — draw digits on a canvas 
 </div>
 
 ## Features
+**Learn mode** — pick a digit, trace it on the canvas with a faint guide overlay, and get instant AI feedback on whether you drew it correctly. This is possible with frontend drawing canvas connected via backend with a lightweight CNN trained on MNIST, runs inference on CPU via PyTorch; returns top-3 predictions with confidence scores                                                                 
+
+**Animated mascot** — reacts to your drawing with four moods (idle, happy, sad, thinking), speech bubbles, and cycling idle messages                                                                           
+
+**Sound effects** — synthesised audio feedback (Web Audio API, no audio files) for correct and incorrect answers                  
+
+**Lock mode** — lock the navigation tabs to prevent accidental mode switching, useful for young children                          
+
+**Settings** — sound effects toggle, animation toggle, and theme picker, persisted to `localStorage` 
 
 ## Local development
 
