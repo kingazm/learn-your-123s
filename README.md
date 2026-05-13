@@ -1,6 +1,6 @@
 # Learn Your 123s
 
-An AI-powered handwriting practice app for children — draw digits on a canvas and get instant feedback from a trained recognition model, guided by an animated mascot.
+An AI-powered handwriting practice app for children — draw digits on a canvas and get instant feedback from a trained recognition model, guided by an animated mascot. Excellent on tablets, computers and mobile phones!
 
 **Live demo:** [learn-your-123s.vercel.app](https://learn-your-123s.vercel.app)
 - frontend on [Vercel](https://learn-your-123s.vercel.app)
