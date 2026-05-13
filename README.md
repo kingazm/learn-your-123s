@@ -7,6 +7,7 @@ An AI-powered handwriting practice app for children — draw digits on a canvas 
 - backend on [Hugging Face Spaces](https://huggingface.co/spaces/kingazm/learn-your-123s)
 - model weights at [Hugging Face Models](https://huggingface.co/kingazm/handwriting-recognition).
 
+## Preview
 <div style="display:flex; gap:12px; align-items:flex-start;">
   <img alt="desktop-1.png" src="desktop-1.png" style="width:68%;" />
   <img alt="mobile-1.png" src="mobile-1.png" style="width:14%;" />
