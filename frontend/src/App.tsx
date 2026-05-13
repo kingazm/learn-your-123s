@@ -16,6 +16,7 @@ import StatsPlaceholder from './components/StatsPlaceholder'
 import TestModePlaceholder from './components/TestModePlaceholder'
 import type { Mode, SubMode } from './config/modes'
 import mascot from './data/mascot.json'
+import { useFavicon } from './hooks/useFavicon'
 import { useSettings } from './hooks/useSettings'
 import { useSound } from './hooks/useSound'
 import type { Mood, Prediction } from './types'
@@ -29,6 +30,7 @@ function fmt(template: string, char: string) {
 
 export default function App() {
   const { settings, update }             = useSettings()
+  useFavicon(settings.theme)
   const [mode, setMode]                  = useState<Mode>('learn')
   const [subModes, setSubModes]          = useState<Record<Mode, SubMode>>({ learn: '123s', practice: '123s', test: '123s' })
   const [locked, setLocked]             = useState(false)
