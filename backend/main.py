@@ -1,1 +1,1 @@
-from app.main import app  # pre-exported for: uvicorn main:app
+from app.main import app  # noqa: F401 — re-exported for uvicorn main:app
