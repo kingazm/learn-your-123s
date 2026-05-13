@@ -2,8 +2,8 @@
 
 An AI-powered handwriting practice app for children — draw digits on a canvas and get instant feedback from a trained recognition model, guided by an animated mascot.
 
-**Live demo:** [kingazm-learn-your-123s.vercel.app](https://kingazm-learn-your-123s.vercel.app)
-- frontend on [Vercel](https://kingazm-learn-your-123s.vercel.app)
+**Live demo:** [learn-your-123s.vercel.app](https://learn-your-123s.vercel.app)
+- frontend on [Vercel](https://learn-your-123s.vercel.app)
 - backend on [Hugging Face Spaces](https://huggingface.co/spaces/kingazm/learn-your-123s)
 - model weights at [Hugging Face Models](https://huggingface.co/kingazm/handwriting-recognition).
 
