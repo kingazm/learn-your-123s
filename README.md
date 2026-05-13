@@ -8,8 +8,9 @@ An AI-powered handwriting practice app for children — draw digits on a canvas 
 - model weights at [Hugging Face Models](https://huggingface.co/kingazm/handwriting-recognition).
 
 <div style="display:flex; gap:12px; align-items:flex-start;">
-  <img alt="desktop-1.png" src="desktop-1.png" style="width:82.5%;" />
-  <img alt="mobile-1.png" src="mobile-1.png" style="width:17%;" />
+  <img alt="desktop-1.png" src="desktop-1.png" style="width:68%;" />
+  <img alt="mobile-1.png" src="mobile-1.png" style="width:14%;" />
+  <img alt="mobile-2.png" src="mobile-2.png" style="width:14%;" />
 </div>
 
 ## Features
