@@ -1,13 +1,15 @@
 from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-_ML = Path(__file__).resolve().parent
+_ML = Path(__file__).resolve().parent / "ml"
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_prefix="APP_")
+    model_config = SettingsConfigDict(env_prefix="APP_", env_file=".env", env_file_encoding="utf-8")
 
     model_path: Path = _ML / "model.pth"
+    model_repo_id: str = ""
     device: str = "cpu"
+    cors_origins: list[str] = []
 
     # Normalisation constants (MNIST statistics)
     mean: float = 0.1307

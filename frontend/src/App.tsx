@@ -21,6 +21,7 @@ import { useSound } from './hooks/useSound'
 import type { Mood, Prediction } from './types'
 
 const DIGITS = ['0','1','2','3','4','5','6','7','8','9']
+const API = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '')
 
 function fmt(template: string, char: string) {
   return template.replace('{char}', char)
@@ -96,7 +97,7 @@ export default function App() {
   async function handleRecognize(dataUrl: string) {
     isIdle.current = false
     try {
-      const res = await fetch('/predict', {
+      const res = await fetch(`${API}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ image: dataUrl }),
@@ -116,7 +117,7 @@ export default function App() {
     isIdle.current = false
     if (!selectedChar) return
     try {
-      const res = await fetch('/predict', {
+      const res = await fetch(`${API}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ image: dataUrl }),

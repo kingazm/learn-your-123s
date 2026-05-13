@@ -1,6 +1,5 @@
 import base64
 import io
-import sys
 
 import numpy as np
 import torch
@@ -10,13 +9,11 @@ from PIL import Image
 from .config import Settings
 from .imaging import is_drawing, preprocess
 from .schemas import Prediction
+from model import DigitsNetwork
 
 
 class Predictor:
     def __init__(self, settings: Settings) -> None:
-        # ml/ is not an installed package, add it to sys.path so model.py is importable
-        sys.path.insert(0, str(settings.model_path.parent))
-        from model import DigitsNetwork 
 
         self._device = settings.device
         self._mean = settings.mean
