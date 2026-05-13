@@ -2,7 +2,7 @@ import type { SubMode } from '../../config/modes'
 
 const OPTIONS: { id: SubMode; label: string }[] = [
   { id: '123s', label: '123s' },
-  { id: 'abc',  label: 'ABCs' },
+  { id: 'ABCs', label: 'ABCs' },
 ]
 
 interface Props {
