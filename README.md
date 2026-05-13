@@ -17,21 +17,22 @@ pip install -r requirements.txt
 python train.py       
 ```
 
+### Backend
+
+```bash
+cd backend
+cp -r frontend/dist backend/static
+python -m venv .venv && source .venv/bin/activate                                                                   
+pip install -r requirements.txt                  
+uvicorn main:app --reload 
+```
+
 ### Frontend
 
 ```bash
 cd frontend
 npm install                                                                                                        
 npm run dev 
-```
-
-### Backend
-
-```bash
-cp -r frontend/dist backend/static
-python -m venv .venv && source .venv/bin/activate                                                                   
-pip install -r requirements.txt                  
-uvicorn main:app --reload 
 ```
 
 The app's UI can be accessed on `localhost:5173`
