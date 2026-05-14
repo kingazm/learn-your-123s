@@ -25,6 +25,15 @@ An AI-powered handwriting practice app for children — draw digits on a canvas 
 
 **Settings** — sound effects toggle, animation toggle, and theme picker, persisted to `localStorage` 
 
+- **Learn mode** — pick a digit, trace it on the canvas with a faint guide overlay, and get instant AI feedback on whether you drew it correctly
+- **Drawing canvas** — smooth freehand drawing with mouse and touch support, auto-submits to the model after you lift the pen
+- **AI digit recognition** — lightweight CNN trained on MNIST, runs inference on CPU via PyTorch; returns top-3 predictions with confidence scores
+- **Animated mascot** — reacts to your drawing with four moods (idle, happy, sad, thinking), speech bubbles, and cycling idle messages
+- **Theme picker** — switch between pink, blue, and yellow colour schemes; the entire UI, pen cursor, and favicon update instantly
+- **Sound effects** — synthesised audio feedback (Web Audio API, no audio files) for correct and incorrect answers
+- **Lock mode** — lock the navigation tabs to prevent accidental mode switching, useful for young children
+- **Settings** — sound effects toggle, animation toggle, and theme picker, persisted to `localStorage`
+
 ## Local development
 
 The project has three parts: ML model, FastAPI backend, and React frontend.
@@ -128,10 +137,10 @@ The Space downloads the model from HF on first boot and caches it for subsequent
 ## Roadmap
 
 - [x] Learn 123s — guided digit tracing with a character guide overlay and instant AI feedback
-- [x] Practice 123s — free-draw digit recognition with per-digit confidence results
 - [x] Mascot — animated character with mood-reactive expressions and speech bubbles
 - [x] Settings — theme picker (pink/blue/yellow), sound effects toggle, and animation toggle
 - [ ] Learn ABCs — trace alphabet letters with guided outlines and AI feedback
+- [ ] Practice 123s — describe what you see with numbers
 - [ ] Practice ABCs — spell out words letter by letter
 - [ ] Counting Practice — see a group of objects and write how many there are
 - [ ] Quiz & Points — timed digit challenges with a score and streak system

@@ -167,7 +167,7 @@ export default function App() {
                  : mode === 'test'         ? <TestModePlaceholder />
                  : mode === 'learn' && subMode === 'ABCs'     ? <LearnABCsPlaceholder />
                  : mode === 'practice' && subMode === 'ABCs'  ? <PracticeABCsPlaceholder />
-                 : mode === 'practice' && subMode === 'ABCs' ? <PracticeModePlaceholder />
+                 : mode === 'practice' && subMode === '123s' ? <PracticeModePlaceholder />
                  : (
       <div className="flex h-full w-full flex-col items-center justify-center">
         {mode === 'learn' && (
