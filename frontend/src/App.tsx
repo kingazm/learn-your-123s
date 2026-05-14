@@ -1,6 +1,7 @@
 import { Lock, LockOpen } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
+import About from './components/About'
 import BookTabs from './components/BookTabs'
 import CharacterPickerModal from './components/CharacterPickerModal'
 import DrawingCanvas from './components/DrawingCanvas'
@@ -9,8 +10,8 @@ import LearnControls from './components/LearnControls'
 import Mascot from './components/Mascot'
 import PracticeABCsPlaceholder from './components/PracticeABCsPlaceholder'
 import PracticeModePlaceholder from './components/PracticeModePlaceholder'
+import SectionNav from './components/SectionNav'
 import SegmentedControl from './components/SegmentedControl'
-import SettingsNav from './components/SettingsNav'
 import SettingsPlaceholder from './components/SettingsPlaceholder'
 import StatsPlaceholder from './components/StatsPlaceholder'
 import TestModePlaceholder from './components/TestModePlaceholder'
@@ -164,6 +165,7 @@ export default function App() {
 
   const leftPage = rightTab === 'stats'    ? <StatsPlaceholder />
                  : rightTab === 'settings' ? <SettingsPlaceholder settings={settings} onUpdate={update} />
+                 : rightTab === 'about'    ? <About />
                  : mode === 'test'         ? <TestModePlaceholder />
                  : mode === 'learn' && subMode === 'ABCs'     ? <LearnABCsPlaceholder />
                  : mode === 'practice' && subMode === 'ABCs'  ? <PracticeABCsPlaceholder />
@@ -227,7 +229,7 @@ export default function App() {
       <main className="flex w-full flex-1 min-h-0 justify-center">
         <div className="flex h-full w-full max-w-[1200px] flex-col">
           <BookTabs mode={rightTab ? null : mode} locked={locked} onSwitch={m => { setRightTab(null); switchMode(m) }} trailing={
-            <SettingsNav
+            <SectionNav
               active={rightTab}
               locked={locked}
               onSelect={id => {

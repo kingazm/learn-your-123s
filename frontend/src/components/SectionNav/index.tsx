@@ -3,6 +3,7 @@ import { tabClass } from '../BookTabs/tabClass'
 const ITEMS = [
   { id: 'stats',    label: 'Stats'    },
   { id: 'settings', label: 'Settings' },
+  { id: 'about',    label: 'About'    },
 ]
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
   locked?: boolean
 }
 
-export default function SettingsNav({ active, onSelect, locked }: Props) {
+export default function SectionNav({ active, onSelect, locked }: Props) {
   return (
     <>
       {ITEMS.map(item => (

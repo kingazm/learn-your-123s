@@ -19,7 +19,8 @@
   ],
   "sectionLines": {
     "stats":    ["Let's see how you've been doing!", "Check out your progress!", "Your practice history is here!"],
-    "settings": ["Let's set things up!", "Customize to your liking!", "Make it yours!", "Make yourself at home!"]
+    "settings": ["Let's set things up!", "Customize to your liking!", "Make it yours!", "Make yourself at home!"],
+    "about":    ["Here's a little bit about me!", "Want to know how I work?", "Let me introduce myself!"]
   },
   "templates": {
     "practice":        "Let's practice drawing {char}!",
